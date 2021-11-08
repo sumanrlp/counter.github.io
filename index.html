@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Counter
+        </title>
+        <style>
+            #main {
+                height: 50vh;
+                display: flex;
+                
+                align-items: center;
+                justify-content: center;
+                
+            }
+            #container {
+                height: 30vh;
+                width: 30vw;
+                background-color: blanchedalmond;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                box-shadow: 0 0 5px black;
+                border-radius: 3px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="main">
+            <div id="container">
+                <div>
+                    <h2>Click the plus icon to count:</h2>
+                </div>
+                <div >
+                    
+                    <button id="btn" style="margin-right: 1vw; background-color: chocolate; color: white;">+</button>
+                    <input id="in" type="text">
+                </div>
+            </div>
+        </div>
+
+
+
+        <script>
+            var count = 0
+            var clk = document.getElementById('btn')
+            var inputtext = document.getElementById('in')
+            clk.addEventListener('click', fun)
+
+            function fun () {
+                count++
+                inputtext.value = count
+            }
+        </script>
+    </body>
+</html>
